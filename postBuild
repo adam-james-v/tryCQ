@@ -14,5 +14,7 @@ pip install pythreejs==0.3.1
 jupyter nbextension install --py --sys-prefix pythreejs && \
 jupyter nbextension enable --py pythreejs --sys-prefix
 
-mkdir ~/.ipython/profile_default/startup
-cp ~/resources/cqjupyter.py ~/.ipython/profile_default/startup
+mkdir ~/.ipython && cd .ipython
+mkdir profile_default && cd profile_default
+mkdir startup && cd startup
+cp ~/resources/cqjupyter.py .
