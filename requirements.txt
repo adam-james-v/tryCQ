@@ -3,3 +3,5 @@ numpy
 matplotlib
 
 cadquery
+ipywidgets
+pythreejs==0.3.1

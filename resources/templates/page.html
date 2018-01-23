@@ -1,0 +1,12 @@
+{% extends "templates/page.html" %}
+{% block script %}
+<script>
+  console.log('hello from CQNB');
+</script>
+{% endblock %}
+
+{% block header_buttons %}
+  <span id="login_widget">
+    <a class="pull-right" style="text-decoration: none; color:black; vertical-align:middle;" href="https://dcowden.github.io/cadquery/" target="_blank"><span style="margin-left: 5px; margin-right: 5px; vertical-align:middle;">{% if notebook_name %}on{% else %}Hosted by AV{% endif %}</span><img src="https://dcowden.github.io/cadquery/_static/cqlogo.png" height='24px' style="vertical-align:middle;"/></a>
+  </span>
+{% endblock %}
