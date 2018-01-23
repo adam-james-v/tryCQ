@@ -5,6 +5,8 @@ python -c "import matplotlib as mpl; mpl.use('Agg'); import pylab as plt; fig, a
 
 test -e test.png && rm test.png
 
+source activate ipykernel_py2
+
 jupyter nbextension install --py --sys-prefix widgetsnbextension && \
 jupyter nbextension enable --py widgetsnbextension --sys-prefix
 
@@ -12,6 +14,5 @@ pip install pythreejs==0.3.1
 jupyter nbextension install --py --sys-prefix pythreejs && \
 jupyter nbextension enable --py pythreejs --sys-prefix
 
-mv ~/resources/cqjupyter.py ~/.ipython/profile_default/startup
-
-source activate ipykernel_py2
+mkdir ~/.ipython/profile_default/startup
+cp ~/resources/cqjupyter.py ~/.ipython/profile_default/startup
