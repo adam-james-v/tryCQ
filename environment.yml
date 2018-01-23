@@ -2,3 +2,4 @@ channels:
   - conda-forge
 dependencies:
   - appmode
+  - pythreejs=0.3.1
