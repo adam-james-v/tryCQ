@@ -4,4 +4,3 @@ matplotlib
 
 git+git://github.com/dcowden/cadquery@master#egg=cadquery
 ipywidgets
-pythreejs==0.3.1
