@@ -4,4 +4,4 @@ matplotlib
 
 cadquery
 ipywidgets
-pythreejs=0.3.1
+pythreejs==0.3.1
