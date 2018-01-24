@@ -5,8 +5,7 @@ python -c "import matplotlib as mpl; mpl.use('Agg'); import pylab as plt; fig, a
 
 test -e test.png && rm test.png
 
-source activate ipykernel_py2
-
+pip install ipywidgets
 jupyter nbextension install --py --sys-prefix widgetsnbextension && \
 jupyter nbextension enable --py widgetsnbextension --sys-prefix
 
