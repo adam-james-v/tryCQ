@@ -5,6 +5,7 @@ python -c "import matplotlib as mpl; mpl.use('Agg'); import pylab as plt; fig, a
 
 test -e test.png && rm test.png
 
+# install and activate extensions in py2 env
 source /srv/venv2/bin/activate
 
 pip install ipywidgets==6.0.1 && \
@@ -17,7 +18,17 @@ jupyter nbextension enable --py pythreejs --sys-prefix
 
 deactivate
 
+# install pythreejs in py3 environment so that things match
+pip install pythreejs==0.3.1  && \
+jupyter nbextension install --py --sys-prefix pythreejs && \
+jupyter nbextension enable --py pythreejs --sys-prefix
+
+# move cqjupyter module into startup folder, so show_object() works
+# TODO: Have this pull from the cqnb github repo instead, so that future module updates are properly captured.
 mkdir ~/.ipython && cd .ipython
 mkdir profile_default && cd profile_default
 mkdir startup && cd startup
-cp ~/resources/cqjupyter.py .
+cp ~/cqjupyter.py .
+
+# clean up the folder
+rm apt.txt postBuild README.md requirements.txt runtime.txt
