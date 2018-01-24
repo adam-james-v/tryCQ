@@ -31,4 +31,5 @@ mkdir startup && cd startup
 cp ~/cqjupyter.py .
 
 # clean up the folder
+cd
 rm apt.txt postBuild README.md requirements.txt runtime.txt
