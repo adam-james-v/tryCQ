@@ -5,13 +5,17 @@ python -c "import matplotlib as mpl; mpl.use('Agg'); import pylab as plt; fig, a
 
 test -e test.png && rm test.png
 
-pip install ipywidgets
+source /srv/venv2/bin/activate
+
+pip install ipywidgets==6.0.1 && \
 jupyter nbextension install --py --sys-prefix widgetsnbextension && \
 jupyter nbextension enable --py widgetsnbextension --sys-prefix
 
-pip install pythreejs==0.3.1
+pip install pythreejs==0.3.1  && \
 jupyter nbextension install --py --sys-prefix pythreejs && \
 jupyter nbextension enable --py pythreejs --sys-prefix
+
+deactivate
 
 mkdir ~/.ipython && cd .ipython
 mkdir profile_default && cd profile_default
