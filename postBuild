@@ -16,12 +16,20 @@ pip install pythreejs==0.3.1  && \
 jupyter nbextension install --py --sys-prefix pythreejs && \
 jupyter nbextension enable --py pythreejs --sys-prefix
 
+pip install appmode  && \
+jupyter nbextension     enable --py --sys-prefix appmode  && \
+jupyter serverextension enable --py --sys-prefix appmode
+
 deactivate
 
 # install pythreejs in py3 environment so that things match
 pip install pythreejs==0.3.1  && \
 jupyter nbextension install --py --sys-prefix pythreejs && \
 jupyter nbextension enable --py pythreejs --sys-prefix
+
+pip install appmode  && \
+jupyter nbextension     enable --py --sys-prefix appmode  && \
+jupyter serverextension enable --py --sys-prefix appmode
 
 # move cqjupyter module into startup folder, so show_object() works
 # TODO: Have this pull from the cqnb github repo instead, so that future module updates are properly captured.
