@@ -2,4 +2,4 @@ numpy
 
 matplotlib
 
-git+git://github.com/dcowden/cadquery@master#egg=cadquery
+git+git://github.com/dcowden/cadquery@dxf_branch#egg=cadquery
