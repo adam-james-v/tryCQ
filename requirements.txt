@@ -2,4 +2,4 @@ numpy
 
 matplotlib
 
-git+git://github.com/dcowden/cadquery@master#egg=cadquery
+cadquery==1.0.0
