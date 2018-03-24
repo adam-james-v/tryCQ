@@ -2,4 +2,4 @@ numpy
 
 matplotlib
 
-cadquery==1.0.0
+cadquery
