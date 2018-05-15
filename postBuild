@@ -8,11 +8,11 @@ test -e test.png && rm test.png
 # install and activate extensions in py2 env
 source /srv/venv2/bin/activate
 
-pip install ipywidgets==6.0.1 && \
+pip install ipywidgets==6.0.1 widgetsnbextension==2.0  && \
 jupyter nbextension install --py --sys-prefix widgetsnbextension && \
 jupyter nbextension enable --py widgetsnbextension --sys-prefix
 
-pip install pythreejs==0.3.1 widgetsnbextension==2.0 && \
+pip install pythreejs==0.3.1 && \
 jupyter nbextension install --py --sys-prefix pythreejs && \
 jupyter nbextension enable --py pythreejs --sys-prefix
 
