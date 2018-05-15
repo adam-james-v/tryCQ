@@ -6,7 +6,6 @@ python -c "import matplotlib as mpl; mpl.use('Agg'); import pylab as plt; fig, a
 test -e test.png && rm test.png
 
 # install and activate extensions in py2 env
-#source /srv/venv2/bin/activate
 source activate /srv/conda/envs/kernel 
 
 pip install ipywidgets==6.0.1 widgetsnbextension==2.0.1  && \
@@ -20,6 +19,7 @@ jupyter nbextension enable --py pythreejs --sys-prefix
 deactivate
 
 # install pythreejs in py3 environment so that things match
+source activate /srv/conda
 
 pip install ipywidgets==6.0.1 widgetsnbextension==2.0.1  && \
 jupyter nbextension install --py --sys-prefix widgetsnbextension && \
